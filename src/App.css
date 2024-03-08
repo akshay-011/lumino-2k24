@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./assets/main-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+ }
+ 
+ .app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white; /* Ensure text is readable against the background */
+ }
+ 
+ header {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for header and footer */
+  padding: 20px;
+  text-align: center;
+ }
+ 
+ main {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+ }
+ 
+ .event-card {
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.813);
+  transition: 0.3s;
+  background-color: rgb(0, 0, 0); 
+  color: white; 
+ }
+ 
+ .event-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+ }
+ 
+ .event-card img {
+  width: 100%;
+  height: auto;
+ }
+ 
+ .event-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+ }
+
+ /* view on phone */
+@media (max-width: 768px){
+  .event-card{
+    display: flex;
+    padding: 0;
+    margin: 5px;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    transition: height 0.6s ease-out;
+    overflow: hidden;
+  }
+
+  .event-card a{
+    width: fit-content;
+  }
+
+  .event-card img{
+    margin: 0;
+  }
+  .main-showcard{
+    display: flex;
+    align-items: center;
+  }
+  .main-events{
+    width: 100%;
+    text-align: center;
+    letter-spacing: 10px;
+    margin: 0;
+    text-decoration: underline;
+    font-size: 40px;
+  }
+
+  .main-showcard{
+    width: auto;
+  }
+
+
+}

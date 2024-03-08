@@ -1,0 +1,18 @@
+.que{
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    
+}
+.ans{
+    font-size: 18px;
+    margin: 0;
+    word-spacing: 2px;
+
+}
+
+.about-container{
+    padding: 10px;
+    /* background-image: url(./assets/about-bg.jpg); */
+    background-size: cover;
+}

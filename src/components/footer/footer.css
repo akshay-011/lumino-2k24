@@ -1,0 +1,40 @@
+.footer{
+    background-color: #142836; /* Semi-transparent background for header and footer */
+  padding: 20px;
+  text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.heading{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0;
+    margin-bottom: 5px;
+}
+.contact p{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 200;
+}
+.contact span{
+    font-weight: 400 !important;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.content a{
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+}
