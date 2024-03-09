@@ -9,10 +9,12 @@
     margin: 0;
     word-spacing: 2px;
 
+
 }
 
 .about-container{
     padding: 10px;
-    /* background-image: url(./assets/about-bg.jpg); */
     background-size: cover;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.708);
 }
