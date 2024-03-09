@@ -71,6 +71,7 @@ body {
   border-radius: 5px;
   width: fit-content;
   text-align: center;
+  margin-bottom: 20px;
  }
  .event-card.expanded {
   height: 550px; 

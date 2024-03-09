@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import AnimatedCard from '../animatedCard/AnimatedCard';
 import "./event.css"
 
-const EventCard = ({ name, description, registerLink, imageName }) => {
+const EventCard = ({ name, description, registerLink, imageName, handleClick, isClicked, index }) => {
  const [image, setImage] = useState(null);
- const [isClicked, setIsClicked] = useState(false); // State to manage the click
 
  useEffect(() => {
     const loadImage = async () => {
@@ -18,10 +17,6 @@ const EventCard = ({ name, description, registerLink, imageName }) => {
 
     loadImage();
  }, [imageName]);
-
- const handleClick = () => {
-    setIsClicked(!isClicked); 
- };
 
  // check desktop or not
  const [isMobile, setIsMobile] = useState(false);
@@ -52,7 +47,9 @@ if(!isMobile){
   )
 }
  return (
-    <div className={`event-card ${isClicked ? 'expanded' : ''}`} onClick={handleClick}>
+    <div className={`event-card ${isClicked ? 'expanded' : ''}`} onClick={() => {
+      handleClick(index)
+    }}>
       {image && <img src={image} alt={name} />}
       {
        isClicked ? <AnimatedCard description={description} registerLink={registerLink} /> : null

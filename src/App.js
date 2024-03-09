@@ -9,6 +9,16 @@ import LoadingAnimation from "./components/loading/LoadingAnimation"
 
 const App = () => {
 
+  const [expandedCard, setExpandedCard] = useState(-1);
+
+  const handleClick = (index) => {
+    if(index === expandedCard){
+      setExpandedCard(-1);
+      return;
+    }
+    setExpandedCard(index);
+  }
+
  const events = [
     { imageName: 'clashOfCodes', description: 'Where coding prowess meets creativity in a fast-paced competition. Test your skills, solve challenges, and outsmart your opponents in this thrilling coding battle!', registerLink: 'https://forms.gle/WcXuTsYtZov2vRQSA', name:"Clash Of Codes" },
     { imageName: 'jumanji', description: 'Dive into a heart-pounding treasure hunt! Outsmart challenges, uncover secrets, and race against time to claim the ultimate prize. Dare to enter the wild and conquer Jumanji', registerLink: 'https://forms.gle/BrFHQqDwr3L3bB3R9', name:"Jumanji" },
@@ -20,8 +30,8 @@ const App = () => {
 
  ];
 
+ // loading screen
  const [isLoading, setIsLoading] = useState(true);
-
  useEffect(() => {
   setTimeout(() => {
     setIsLoading(false);
@@ -41,7 +51,13 @@ const App = () => {
       <h1 className='main-events' >Events</h1>
       <main className='main-showcard' >
         {events.map((event, index) => (
-          <EventCard key={index} {...event} />
+          <EventCard 
+          key={index} 
+          {...event} 
+          handleClick={handleClick}
+          isClicked={expandedCard === index}
+          index={index}
+          />
         ))}
       </main>
       <Footer />
