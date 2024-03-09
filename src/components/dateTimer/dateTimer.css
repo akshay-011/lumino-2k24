@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Madimi+One&display=swap');
+
+.timer-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+.timer-container #time{
+    font-size: 100px;
+    font-family: "Angkor", serif;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.timer-container .explanation{
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+.timer-container .explanation p{
+    margin: 0;
+    font-size: 35px;
+}
+
+@media (max-width: 768px){
+    .timer-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+    
+    }
+    
+    .timer-container #time{
+        font-size: 55px;
+        font-family: "Angkor", serif;
+        margin: 0;
+    }
+    
+    .timer-container .explanation{
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+    }
+    
+    .timer-container .explanation p{
+        margin: 0;
+        font-size: 26px;
+    }
+}

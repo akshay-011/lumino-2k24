@@ -1,7 +1,22 @@
+/* lap veiew */
+
 .header-logo{
-    width: 70%;
+    width: 15%;
 }
 
-.que{
-    font-size: 20px;
+
+/* phone view */
+@media (max-width: 768px){
+    .header-logo{
+        width: 100%;
+    }
+    
+    .que{
+        font-size: 20px;
+    }
+    
+    .header{
+        background-color: rgba(0, 0, 0, 0.626);
+    }
+    
 }

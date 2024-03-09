@@ -1,5 +1,5 @@
 .footer{
-    background-color: #142836; /* Semi-transparent background for header and footer */
+  background-color: #142836;
   padding: 20px;
   text-align: center;
 }
@@ -37,4 +37,20 @@
     color: white;
     text-decoration: none;
     font-weight: 300;
+}
+
+.socials{
+    gap: 10px;
+}
+
+.cont{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#location{
+    width: 100%;
+    display: flex;
 }

@@ -16,17 +16,19 @@ const Footer = () => {
       </div>
 
       <div className="socials contact">
-        <h4 className="heading">Socials</h4>
-        <section className='content'>
-          <img height={20}  src={image} alt="instagram logo" />
-          <a href='https://www.instagram.com/hash.includers/' target='_blank'>Instagram</a>
-        </section>
-        <div className="content">
-          <img height={20} src={map} alt="google map logo" />
-          <a target="_blank" rel='noopener noreferrer' href="https://maps.app.goo.gl/h4FZZzpvcapYwRoDA">Google Map</a>
-        </div>
+        <h4 className="heading" id='location' >Location & Socials</h4>
+        <section className="cont">
+          <div className="content" id='map' >
+            <img height={30} src={map} alt="google map logo" />
+            <a target="_blank" rel='noopener noreferrer' href="https://maps.app.goo.gl/h4FZZzpvcapYwRoDA">Google Map</a>
+          </div>
+          <section className='content'>
+            <img height={20}  src={image} alt="instagram logo" />
+            <a href='https://www.instagram.com/hash.includers/' target='_blank'>Instagram</a>
+          </section>
+          </section>
       </div>
-    </footer>
+    </footer> 
   )
 }
 
