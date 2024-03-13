@@ -1,4 +1,47 @@
-.event-card.expanded {
-    height: 550px; 
-    border-radius: 0px;
+@keyframes opening{
+  0%{
+    transform: translateY(100%);
+    opacity: 0;
   }
+  50%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+}
+
+
+.event-card.expanded {
+    height: 600px;
+  }
+
+.event-card:hover{
+  box-shadow: #014421 0px 54px 55px, #014421 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px 10px 5px;
+}
+
+.fee{
+  width: 100%;
+  font-weight: 600;
+  margin: 0px !important ;  
+  padding: 0px;
+}
+
+.last-conatiner{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.event-card {
+  animation: opening linear !important ;
+  animation-timeline: view() !important ;
+}
+
+
+@media (max-width: 768px){
+  .fee{
+    margin-left: 20px !important;
+  }
+}

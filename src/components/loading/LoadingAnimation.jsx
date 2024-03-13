@@ -1,6 +1,7 @@
 // LoadingAnimation.js
 import React from 'react';
-import './loading.css'; // Make sure to create this CSS file
+import './loading.css'; 
+
 
 const LoadingAnimation = () => {
  return (

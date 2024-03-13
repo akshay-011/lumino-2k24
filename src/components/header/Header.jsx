@@ -1,5 +1,5 @@
 import React from 'react'
-import lumino from "./assets/lumino-logo.png"
+import lumino from "./assets/lumino-logo.svg"
 import "./header.css"
 
 const Header = () => {

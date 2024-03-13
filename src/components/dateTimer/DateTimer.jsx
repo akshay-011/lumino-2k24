@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./dateTimer.css"
+import Glitch from '../glitch/Glitch';
 
 const DateTimer = () => {
     // date to
@@ -37,9 +38,10 @@ const DateTimer = () => {
 
  return (
     <div className='timer-container' >
-      <p id='time' >
+      <Glitch />
+      <div id='time' >
         {timeLeft.days} : {timeLeft.hours} : {timeLeft.minutes} : {timeLeft.seconds}
-      </p>
+      </div>
       <div className="explanation">
         <p className="exp">Day</p>
         <p className="exp">Hour</p>

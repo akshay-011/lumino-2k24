@@ -1,8 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import AnimatedCard from '../animatedCard/AnimatedCard';
 import "./event.css"
 
-const EventCard = ({ name, description, registerLink, imageName, handleClick, isClicked, index }) => {
+const EventCard = ({  
+                      name, 
+                      description, 
+                      registerLink, 
+                      imageName, 
+                      handleClick, 
+                      isClicked, 
+                      index, 
+                      regFee, 
+                      isMobile, 
+                      time 
+                    }) => {
  const [image, setImage] = useState(null);
 
  useEffect(() => {
@@ -18,41 +29,25 @@ const EventCard = ({ name, description, registerLink, imageName, handleClick, is
     loadImage();
  }, [imageName]);
 
- // check desktop or not
- const [isMobile, setIsMobile] = useState(false);
 
- useEffect(() => {
-    const checkMobile = () => {
-      const isMobile = window.innerWidth <= 768;
-      setIsMobile(isMobile);
-    };
-
-    // Check on initial load
-    checkMobile();
-
-    // Check on window resize
-    window.addEventListener('resize', checkMobile);
-
-    // Cleanup event listener on component unmount
-    return () => window.removeEventListener('resize', checkMobile);
- }, []);
+ 
 
 if(!isMobile){
   return(
 
   <div className={'event-card'}>
       {image && <img src={image} alt={name} />}
-       <AnimatedCard description={description} registerLink={registerLink} />
+       <AnimatedCard time={time} description={description} registerLink={registerLink} regFee={regFee} />
   </div>
   )
 }
  return (
     <div className={`event-card ${isClicked ? 'expanded' : ''}`} onClick={() => {
-      handleClick(index)
+      handleClick(index);
     }}>
       {image && <img src={image} alt={name} />}
       {
-       isClicked ? <AnimatedCard description={description} registerLink={registerLink} /> : null
+       isClicked ? <AnimatedCard time={time} description={description} registerLink={registerLink} regFee={regFee} /> : null
       }
     </div>
  );
