@@ -17,11 +17,11 @@ const events = [
     },
     { 
         imageName: 'wizQuizWhiz', 
-        description: 'The ultimate showdown of knowledge and wit! Join the competition, test your smarts, and emerge as the reigning quiz champion!', 
+        description: 'The ultimate showdown of knowledge and wit! Join the competition, test your smarts, and emerge as the reigning quiz champion! (Team of 2 Members)', 
         registerLink: 'https://forms.gle/sY2h1eJ5t6Lad8dw5', 
         name:"Wiz Quiz Whiz", 
         regFee: "Free" ,
-        time:"9:30am - 10:10am"
+        time:"9:30am - 10:10am",
     },
     { 
         imageName: 'typingRush', 
@@ -41,7 +41,7 @@ const events = [
     },
     { 
         imageName: 'jumanji', 
-        description: 'Dive into a heart-pounding treasure hunt! Outsmart challenges, uncover secrets, and race against time to claim the ultimate prize.', 
+        description: 'Dive into a heart-pounding treasure hunt! Outsmart challenges, uncover secrets, and race against time to claim the ultimate prize. (Team of 4 Members)', 
         registerLink: 'https://forms.gle/BrFHQqDwr3L3bB3R9', 
         name:"Jumanji",
         regFee: "40 Rs" ,
